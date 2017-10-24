@@ -1,0 +1,29 @@
+
+fail unload()
+{
+node* cursor= Head;
+    node* temp;
+    int k =0;
+    while(cursor != NULL)
+    {   
+        
+        for (int i = 0; i<27;)
+        {
+         temp = cursor;
+         cursor = cursor -> next[i];
+
+         if (cursor != NULL && 1<cursor->wordlength && cursor->wordlength<46)
+         {
+           i=0;
+           continue;
+         }
+            cursor = temp;
+            i++;
+
+        }
+        free(temp);
+        k++;
+        cursor = Head;
+       
+
+    }
